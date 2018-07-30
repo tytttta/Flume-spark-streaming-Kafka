@@ -1,4 +1,4 @@
-# Flume-spark-streaming-Kafka
+# Flume+park streaming+Kafka
 
 # Ubuntu 18.04下安装Flume+Spark Streaming +_Kafka
 
@@ -67,3 +67,31 @@ agent1.sinks.k1.channel=c1
 
 
 **启动时可能会有警告，说JAVA_HOME未配置**
+
+
+# Kafka 安装
+Kafka集群模式需要提前安装好Zookeeper。
+## 1 Zookeeper 安装
+
+- 提示：Kafka单例模式不需要安装额外的Zookeeper，可以使用内置的Zookeeper。
+
+- Kafka集群模式需要至少3台服务器。本课实战用到的服务器Hostname：master，slave1，slave2。
+
+- 本课中用到的Zookeeper版本是Zookeeper-3.4.13。
+
+###  1)    下载Zookeeper
+
+进入 http://www.apache.org/dyn/closer.cgi/zookeeper/， 你可以选择其他镜像网址去下载，用官网推荐的镜像：http://mirror.bit.edu.cn/apache/zookeeper/ 。
+
+解压spark包
+````
+ tar -zxvf zookeeper-3.4.13.tar.gz
+````
+把解压后的文件夹剪切到指定目录即安装好Zookeeper了：
+````
+mv zookeeper-3.4.13 /usr/local/spark
+````
+
+之后在/usr/local/spark目录会多出一个zookeeper-3.4.13的新目录。下面我们讲如何配置安装好的Zookeeper。
+
+###
